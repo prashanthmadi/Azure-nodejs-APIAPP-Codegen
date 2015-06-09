@@ -1,0 +1,161 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "NodeJSAPIAPP",
+    "description": "Alpha version of the True NTH portal RESTful API, to be used by True NTH intervention applications. Can be found at https://raw.githubusercontent.com/uwcirg/true_nth_usa_services/master/true-nth-portal.yaml",
+    "version": "1.0.0"
+  },
+  "produces": ["application/json"],
+  "host": "localhost:8080",
+  "basePath": "/",
+  "paths": {
+  
+  "/api/CallFromCSToNodeJs": {
+    "post": {
+      "x-swagger-router-controller": "CallFromCSToNodeJs",
+      "tags": ["CallFromCSToNodeJs"],
+      "operationId": "callFromCSToNodeJsPost",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "value",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK",
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/api/CallFromJavaToNodeJs": {
+    "post": {
+      "x-swagger-router-controller": "CallFromJavaToNodeJs",
+      "tags": ["CallFromJavaToNodeJs"],
+      "operationId": "callFromJavaToNodeJsPost",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "value",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK",
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/api/CallFromPHPToNodeJs": {
+    "post": {
+      "x-swagger-router-controller": "CallFromPHPToNodeJs",
+      "tags": ["CallFromPHPToNodeJs"],
+      "operationId": "callFromPHPToNodeJsPost",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "value",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK",
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   ,
+  
+  "/api/CallFromWebsiteToNodeJs": {
+    "post": {
+      "x-swagger-router-controller": "CallFromWebsiteToNodeJs",
+      "tags": ["CallFromWebsiteToNodeJs"],
+      "operationId": "callFromWebsiteToNodeJsPost",
+      "parameters": [
+        
+        {
+  "in" : "body",
+  "name" : "value",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+      ],
+      "responses": {
+        
+        "200": {
+  "description" : "OK",
+  "schema" : {
+    "$ref" : "#/definitions/BumblebeeMessage"
+  }
+}
+        
+        
+      }
+    }
+  } 
+  
+   
+  }, "definitions": {
+  "BumblebeeMessage": {
+  "type" : "object",
+  "properties" : {
+    "sessionid" : {
+      "type" : "string"
+    },
+    "message" : {
+      "type" : "string"
+    },
+    "status" : {
+      "type" : "integer",
+      "format" : "int32"
+    }
+  }
+}
+  }
+}
